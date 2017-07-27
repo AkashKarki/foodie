@@ -18,4 +18,48 @@
 <div class="slide"></div>
 </div>
   </div>
+  <div class="row">
+<div class="col-lg-6">
+<div class="input-group">
+<input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+  <input type="button" value="GO" class="logBut">
+</div><!-- /input-group -->
+</div><!-- /.col-lg-6 -->
 </div>
+    <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
+<div class="rest-wrapper">
+  <div class="image">
+      <img ng-src="{{restaurant.image}}" height="100" width="100">
+  </div>
+  <div class="rest-info">
+      <div class="rest-category">
+         <small>{{restaurant.category}} </small>
+      </div>
+      <div class="rest-name">
+      <strong>{{restaurant.name}}</strong>
+      </div>
+      <div>
+         <strong> {{restaurant.location}}</strong>
+      </div>
+      <div class="rest-address">
+          {{restaurant.address}}
+      </div>
+  </div>
+</div>
+<div class="rest-extra">
+  <div class="type">
+      <div>Cuisines:</div>
+      <div>Cost for Two: </div>
+      <div>Hours:</div>
+  </div>
+  <div class="value">
+      <div>{{restaurant.cuisines}}</div>
+      <div>{{restaurant.cost}}</div>
+      <div>{{restaurant.hours}}</div>
+  </div>
+</div>
+<div class="rating">
+  <strong>{{restaurant.vote}}</strong>
+</div>
+</div>
+    </div>
