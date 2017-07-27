@@ -1,0 +1,23 @@
+<div ng-controller="loginController">
+  <form name="Login">
+<div class="box">
+<h1>Log In</h1>
+<div>
+<lable>Email:</label>
+</div>
+<input type="email" name="emails" class="emails" required="" ng-model="useremail" placeholder="Email"/>
+<div ng-show="Login.emails.$error.email">This is not a valid email.</div>
+<div>
+<lable>Password:</label>
+</div>
+<input type="password" name="pass" class="password" required="" placeholder="Password" ng-model="userpass" ng-minlength="6" ng-maxlength="16"/>
+<div ng-show="Login.pass.$error.minlength">password can not be less than 6 character.</div>
+  <div ng-show="Login.pass.$error.maxlength">password can not be greater than 16 character.</div>
+<a href="#"><div class="btn" ng-disabled="Login.$invalid">Sign In</div></a> <!-- End Btn -->
+
+<a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+
+</div> <!-- End Box -->
+
+</form>
+</div>
