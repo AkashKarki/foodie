@@ -8,9 +8,23 @@ function carousel(){
         if (index > 2) {
         index = 1;
     }
-    show="image"+index; 
-    console.log(show); 
+    show="image"+index;
+    console.log(show);
     $('.slide').removeClass("hidden");//chaining
     $(".slide").addClass(show);
-    setTimeout(carousel, 10000);  
+    setTimeout(carousel, 10000);
 }
+
+
+var foodie = angular.module('foodie',[]);
+
+
+foodie.controller('RestrauntController',function($scope) {
+})
+
+
+
+
+
+foodie.controller('loginController',function($scope) {
+})
