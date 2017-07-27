@@ -46,7 +46,7 @@ foodie.controller('RestrauntController',function($scope) {
   	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
   },
   {
-  	name: 'Farzi Cafe',
+  	name: 'pizza Cafe',
   	address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
   	location: 'Connaught Place',
   	category: 'Casual Dining, Bar',
@@ -57,7 +57,7 @@ foodie.controller('RestrauntController',function($scope) {
   	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
   },
   {
-  	name: 'Farzi Cafe',
+  	name: 'akash Cafe',
   	address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
   	location: 'Connaught Place',
   	category: 'Casual Dining, Bar',
@@ -74,5 +74,9 @@ foodie.controller('RestrauntController',function($scope) {
 
 
 
-foodie.controller('loginController',function($scope) {
+foodie.controller('loginController',function($scope,$location) {
+	$scope.goTohome = function() {
+		console.log('inside')
+		$location.url('home')
+	}
 })

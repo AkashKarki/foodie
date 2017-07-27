@@ -60,7 +60,7 @@ h1{
   width:300px;
   border-radius:6px;
   margin: 0 auto 0 auto;
-  padding:0px 0px 70px 0px;
+  padding:5px 6px 70px 9px;
   border: #2980b9 4px solid;
 }
 
@@ -90,11 +90,10 @@ h1{
   color:white;
   border-radius:4px;
   border: #27ae60 1px solid;
-
   margin-top:20px;
   margin-bottom:20px;
   float:left;
-  margin-left:16px;
+  margin-left:3px;
   font-weight:800;
   font-size:0.8em;
 }
@@ -125,7 +124,9 @@ background:#3594D2;
 form{
   margin-top: 12%;
 }
-
+.emails,.password{
+  margin-top: 5px;
+}
 .emails.ng-invalid{
   border: red 1px solid;
 }
@@ -153,7 +154,7 @@ input[type="email"], input[type="password"], textarea, select {
   width: 600px;
   margin: 0 auto ;
   background-color: grey;
-  border-radius: 4px;
+  border-radius: 6px;
   background-color: white;
 }
 .type,.value{
@@ -213,12 +214,18 @@ display:inline-block;
 .rest-wrapper {
     font-family: sans-serif;
 }
+.form-control{
+  border-radius: 10px;
+}
 
 .input-group{
-  width: 300px;
-  margin: 0 auto;
-  text-align: center;
-  margin-left: 75%;
+  width: 400px;
+
+  }
+  .row{
+    margin-left: 35%;
+    margin-right: 50%;
+    margin-top: 5%;
   }
 
 .logBut{
