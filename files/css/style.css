@@ -126,11 +126,19 @@ form{
   margin-top: 12%;
 }
 
-.box input[type="text"].ng-invalid{
+.emails.ng-invalid{
   border: red 1px solid;
 }
 
-.box input[type="password"].ng-valid{
+.emails.ng-valid{
+  border: green 1px solid;
+}
+
+.password.ng-invalid{
+  border: red 1px solid;
+}
+
+.password.ng-valid{
   border: green 1px solid;
 }
 
