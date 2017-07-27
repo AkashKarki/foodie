@@ -27,7 +27,15 @@
       <div class="slide"></div>
       </div>
         </div>
-          <div ng-repeat="restaurant in restaurants" class="restaurant">
+        <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+        <input type="button" value="GO" class="logBut">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div>
+          <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
     <div class="rest-wrapper">
         <div class="image">
             <img ng-src="{{restaurant.image}}" height="100" width="100">

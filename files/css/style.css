@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #e5e5e5;
 }
 .header{
     width: 100%;
@@ -125,11 +126,11 @@ form{
   margin-top: 12%;
 }
 
-input.ng-invalid{
+.box input[type="text"].ng-invalid{
   border: red 1px solid;
 }
 
-input.ng-valid{
+.box input[type="password"].ng-valid{
   border: green 1px solid;
 }
 
@@ -145,7 +146,7 @@ input[type="email"], input[type="password"], textarea, select {
   margin: 0 auto ;
   background-color: grey;
   border-radius: 4px;
-
+  background-color: white;
 }
 .type,.value{
   display: inline-block;
@@ -159,6 +160,11 @@ input[type="email"], input[type="password"], textarea, select {
   position: absolute;
   top: 1rem;
     right: 1rem;
+    background-color: #5BA829;
+    font-size: 18px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+
 }
 .rest-info,.image{
 display:inline-block;
@@ -166,6 +172,7 @@ display:inline-block;
 .image{
   position: absolute;
   padding:10px;
+  border-radius: 4px;
 }
 .rest-info{
   margin-top: 2%;
@@ -174,4 +181,43 @@ display:inline-block;
 .rest-extra{
   margin-left: 4%;
   margin-top: 5%;
+  border-top: 1px solid #e7e7e7;
+}
+
+.rest-wrapper .image img {
+    border-radius: 6px;
+}
+.type{
+  color: #89959B;
+}
+.rest-address{
+
+  color: #89959B;
+}
+.rest-category {
+  text-transform: uppercase;
+    color: #89959B;}
+
+    .rest-name {
+    font-size: 24px;
+    color: #cb202d;
+}
+.rest-wrapper {
+    font-family: sans-serif;
+}
+
+.input-group{
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 75%;
+  }
+
+.logBut{
+  padding: 5.2px;
+}
+.logBut,.form-control
+{
+  position: absolute;
+  display: inline;
 }
