@@ -16,7 +16,20 @@ function carousel(){
 }
 
 
-var foodie = angular.module('foodie',[]);
+var foodie = angular.module('foodie',['ngRoute']);
+
+
+foodie.config(function ($routeProvider) {
+	$routeProvider
+	.when('/',{
+		templateUrl: 'pages/login.html',
+		controller: 'loginController'
+	})
+	.when('/home',{
+		templateUrl: 'pages/main.html',
+		controller: 'RestrauntController'
+	})
+})
 
 
 foodie.controller('RestrauntController',function($scope) {
