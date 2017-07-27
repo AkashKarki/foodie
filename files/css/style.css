@@ -136,3 +136,42 @@ input.ng-valid{
 input[type="email"], input[type="password"], textarea, select {
     outline: none;
 }
+.rest-wrapper{
+  margin-top: 5%;
+}
+.restaurant{
+  position: relative;
+  width: 600px;
+  margin: 0 auto ;
+  background-color: grey;
+  border-radius: 4px;
+
+}
+.type,.value{
+  display: inline-block;
+}
+
+.value{
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.rating{
+  position: absolute;
+  top: 1rem;
+    right: 1rem;
+}
+.rest-info,.image{
+display:inline-block;
+}
+.image{
+  position: absolute;
+  padding:10px;
+}
+.rest-info{
+  margin-top: 2%;
+  margin-left: 20%;
+}
+.rest-extra{
+  margin-left: 4%;
+  margin-top: 5%;
+}
