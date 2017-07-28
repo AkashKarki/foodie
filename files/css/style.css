@@ -153,7 +153,6 @@ input[type="email"], input[type="password"], textarea, select {
   position: relative;
   width: 600px;
   margin: 0 auto ;
-  background-color: grey;
   border-radius: 6px;
   background-color: white;
 }
@@ -210,6 +209,9 @@ display:inline-block;
     .rest-name {
     font-size: 24px;
     color: #cb202d;
+}
+.rest-name a{
+  color: #cb202d;
 }
 .rest-wrapper {
     font-family: sans-serif;

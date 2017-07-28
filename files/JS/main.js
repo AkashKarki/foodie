@@ -29,6 +29,10 @@ foodie.config(function ($routeProvider) {
 		templateUrl: 'pages/main.html',
 		controller: 'RestrauntController'
 	})
+  .when('/restraunt/:id',{
+		templateUrl: 'pages/restaurant.html',
+		controller: 'showRestraunt'
+	})
 })
 
 
@@ -40,6 +44,7 @@ foodie.controller('RestrauntController',function($scope) {
   	location: 'Connaught Place',
   	category: 'Casual Dining, Bar',
   	vote: '4.2',
+    id:'1',
   	cuisines: 'Modern Indian',
   	cost: '2200',
   	hours: '12 Noon to 1 AM (Mon-Sun)',
@@ -51,6 +56,7 @@ foodie.controller('RestrauntController',function($scope) {
   	location: 'Connaught Place',
   	category: 'Casual Dining, Bar',
   	vote: '4.2',
+    id:'2',
   	cuisines: 'Modern Indian',
   	cost: '2200',
   	hours: '12 Noon to 1 AM (Mon-Sun)',
@@ -62,6 +68,7 @@ foodie.controller('RestrauntController',function($scope) {
   	location: 'Connaught Place',
   	category: 'Casual Dining, Bar',
   	vote: '4.2',
+    id:'3',
   	cuisines: 'Modern Indian',
   	cost: '2200',
   	hours: '12 Noon to 1 AM (Mon-Sun)',
@@ -80,4 +87,11 @@ foodie.controller('loginController',function($scope,$location) {
 		$location.url('home')
     console.log('inside2')
 	}
+})
+
+
+
+
+foodie.controller('showRestraunt',function($scope) {
+
 })
