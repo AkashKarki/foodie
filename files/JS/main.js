@@ -78,5 +78,6 @@ foodie.controller('loginController',function($scope,$location) {
 	$scope.goTohome = function() {
 		console.log('inside')
 		$location.url('home')
+    console.log('inside2')
 	}
 })
