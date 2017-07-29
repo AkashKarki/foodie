@@ -13,7 +13,7 @@
   </ul>
   </div>
   </nav>
-
+<div ng-if="restraunt.name">
     <div class="covers">
     <img  ng-src="{{restraunt.backimage}}" height="43%" width="61%">
   </div>
@@ -26,6 +26,10 @@
       </div>
       <div class="category-main">
         {{restraunt.category}}
+        <div class="bestDish" ng-if="restraunt.bestDish" style="margin-left:40%;">
+  	        <span>Recommended:{{restraunt.bestDish.name}} </span>
+  	        <div ng-click="getIngredients(restaurant.bestDish.image)" class="button">Get Ingredients</div>
+  		</div>
       </div>
       <div class="order">
         <button>Order Online</button>
@@ -33,5 +37,8 @@
       <div class="loc">
         {{restraunt.address}}
       </div>
+
   </div>
+</div>
+<div ng-hide="restraunt.name" style="text-align:center;margin-top:20%;"><h1>404-PAGE NOT FOUND</h1></div>
 </div>

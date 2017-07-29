@@ -256,6 +256,15 @@ h2{
   margin-left: 3%;
   margin-top: 3%;
 }
+.bestDish .button {
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
 .rating-main{
   position: absolute;
   top: 3rem;
