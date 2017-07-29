@@ -106,7 +106,7 @@ var restraunt=[{
   backimage:'https://b.zmtcdn.com/data/res_imagery/18233593_RESTAURANT_00272acd0235af309a0bbe4843e53499.jpg?output-format=webp',
   bestDish: {
 	name: 'cheese dip cookie',
-	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg?fit=around%7C800%3A792&crop=800%3A792%3B%2A%2C%2A'
+	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
 },
 },
 {
@@ -123,7 +123,7 @@ var restraunt=[{
   backimage:"https://b.zmtcdn.com/data/res_imagery/1395_CHAIN_d65b48669fa4bfcda9bb2a8c49413be2.jpg?output-format=webp",
   bestDish: {
 	name: 'Brown Rolls',
-	image: 'https://b.zmtcdn.com/data/reviews_photos/5d4/6833bccf5e509ae1bd8b3f1e9c4145d4_1499413777.jpg?fit=around%7C800%3A1200&crop=800%3A1200%3B%2A%2C%'
+	image: 'https://b.zmtcdn.com/data/reviews_photos/5d4/6833bccf5e509ae1bd8b3f1e9c4145d4_1499413777.jpg'
 },
 },
 {
@@ -140,19 +140,20 @@ var restraunt=[{
   backimage:"https://b.zmtcdn.com/data/res_imagery/2649_RESTAURANT_7576f3e8622589e1dd3ef23896c305f3.jpg?output-format=webp",
   bestDish: {
 	name: 'chocolate cake',
-	image: 'https://b.zmtcdn.com/data/pictures/chains/9/2649/e202ef113e6cad530754f2f42737e86b.jpg?fit=around%7C600%3A386&crop=600%3A386%3B%2A%2C%2A'
+	image: 'https://b.zmtcdn.com/data/pictures/chains/9/2649/e202ef113e6cad530754f2f42737e86b.jpg'
 },
 },
 ];
 $scope.restraunt=restraunt[$routeParams.id-1];
 
 $scope.getIngredients = function(url) {
+	console.log(url)
 	var data = '{"inputs":[{"data":{"image":{"url":"' + url + '"}}}]}'
 	$http({
 		'method': 'POST',
 		'url': 'https://api.clarifai.com/v2/models/bd367be194cf45149e75f01d59f77ba7/outputs',
 		'headers': {
-			'Authorization': 'b7f174c5e0e042979e576bd2ce176d59',
+			'Authorization': 'Key b7f174c5e0e042979e576bd2ce176d59',
 			'Content-Type': 'application/json'
 		},
 		'data': data
