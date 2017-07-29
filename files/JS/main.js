@@ -51,28 +51,28 @@ foodie.controller('RestrauntController',function($scope) {
   	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
   },
   {
-  	name: 'pizza Cafe',
-  	address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
-  	location: 'Connaught Place',
-  	category: 'Casual Dining, Bar',
-  	vote: '4.2',
+  	name: 'Brown Sugar',
+  	address: 'M-73, M Block Market, Greater Kailash (GK) 1, New Delhi',
+  	location: 'Greater Kailash (GK) 1',
+  	category: 'Fast Food, Beverages',
+  	vote: '3.8',
     id:'2',
-  	cuisines: 'Modern Indian',
-  	cost: '2200',
+  	cuisines: 'CAFÉ',
+  	cost: '600',
   	hours: '12 Noon to 1 AM (Mon-Sun)',
-  	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
+  	image: 'https://b.zmtcdn.com/data/pictures/chains/5/1395/b9904d3c19534d029ca3a3f0643b2849_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A'
   },
   {
-  	name: 'akash Cafe',
-  	address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
-  	location: 'Connaught Place',
-  	category: 'Casual Dining, Bar',
-  	vote: '4.2',
+  	name: 'Whipped',
+  	address: 'E-556, Greater Kailash (GK) 2, New Delhi',
+  	location: 'Greater Kailash (GK) 2',
+  	category: 'BAKERY,DESSERT PARLOR',
+  	vote: '4.0',
     id:'3',
-  	cuisines: 'Modern Indian',
-  	cost: '2200',
+  	cuisines: 'Bakery, Desserts',
+  	cost: '500',
   	hours: '12 Noon to 1 AM (Mon-Sun)',
-  	image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg'
+  	image: 'https://b.zmtcdn.com/data/pictures/9/2649/0661277daa17c54c8d2bdcf336c37117_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A'
   },
 ]
 })
@@ -83,15 +83,54 @@ foodie.controller('RestrauntController',function($scope) {
 
 foodie.controller('loginController',function($scope,$location) {
 	$scope.goTohome = function() {
-		console.log('inside')
 		$location.url('home')
-    console.log('inside2')
 	}
 })
 
 
 
 
-foodie.controller('showRestraunt',function($scope) {
-
+foodie.controller('showRestraunt',function($scope,$routeParams) {
+  console.log($routeParams.id);
+var restraunt=[{
+  name: 'Farzi Cafe',
+  address: '38/39, Level 1, Block E , Inner Circle, Connaught Place',
+  location: 'Connaught Place',
+  category: 'Casual Dining, Bar',
+  vote: '4.2',
+  id:'1',
+  cuisines: 'Modern Indian',
+  cost: '2200',
+  hours: '12 Noon to 1 AM (Mon-Sun)',
+  image: 'https://b.zmtcdn.com/data/pictures/chains/2/308022/dabd30bd0b000ea859ada9a08a0132fc.jpg',
+  backimage:'https://b.zmtcdn.com/data/res_imagery/18233593_RESTAURANT_00272acd0235af309a0bbe4843e53499.jpg?output-format=webp'
+},
+{
+  name: 'Brown Sugar',
+  address: 'M-73, M Block Market, Greater Kailash (GK) 1, New Delhi',
+  location: 'Greater Kailash (GK) 1',
+  category: 'Fast Food, Beverages',
+  vote: '3.8',
+  id:'2',
+  cuisines: 'CAFÉ',
+  cost: '600',
+  hours: '12 Noon to 1 AM (Mon-Sun)',
+  image: 'https://b.zmtcdn.com/data/pictures/chains/5/1395/b9904d3c19534d029ca3a3f0643b2849_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A',
+  backimage:"https://b.zmtcdn.com/data/res_imagery/1395_CHAIN_d65b48669fa4bfcda9bb2a8c49413be2.jpg?output-format=webp"
+},
+{
+  name: 'Whipped',
+  address: 'E-556, Greater Kailash (GK) 2, New Delhi',
+  location: 'Greater Kailash (GK) 2',
+  category: 'BAKERY,DESSERT PARLOR',
+  vote: '4.0',
+  id:'3',
+  cuisines: 'Bakery, Desserts',
+  cost: '500',
+  hours: '12 Noon to 1 AM (Mon-Sun)',
+  image: 'https://b.zmtcdn.com/data/pictures/9/2649/0661277daa17c54c8d2bdcf336c37117_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A',
+  backimage:"https://b.zmtcdn.com/data/res_imagery/2649_RESTAURANT_7576f3e8622589e1dd3ef23896c305f3.jpg?output-format=webp"
+},
+];
+$scope.restraunt=restraunt[$routeParams.id-1];
 })

@@ -14,4 +14,24 @@
   </div>
   </nav>
 
+    <div class="covers">
+    <img  ng-src="{{restraunt.backimage}}" height="43%" width="61%">
+  </div>
+  <div class="detail-info">
+    <div class="name">
+      <h2>{{restraunt.name}}</h2>
+    </div>
+      <div class="rating-main">
+        <strong>{{restraunt.vote}}</strong>
+      </div>
+      <div class="category-main">
+        {{restraunt.category}}
+      </div>
+      <div class="order">
+        <button>Order Online</button>
+      </div>
+      <div class="loc">
+        {{restraunt.address}}
+      </div>
+  </div>
 </div>

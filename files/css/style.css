@@ -238,3 +238,58 @@ display:inline-block;
   position: absolute;
   display: inline;
 }
+.covers{
+
+  margin-left: 10%;
+}
+.covers img{
+  border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.detail-info{
+  position: absolute;
+  margin-left: 10%;
+  background-color: white;
+  width: 55%;
+}
+h2{
+  margin-left: 3%;
+  margin-top: 3%;
+}
+.rating-main{
+  position: absolute;
+  top: 3rem;
+    right: 1rem;
+    background-color: #5BA829;
+    font-size: 23px;
+    border-radius: 6px;
+    letter-spacing:12px;
+    text-align: center;
+}
+.category-main{
+  margin-left: 2%;
+  margin-top: 5%;
+  color: #89959B;
+  font-size: 16px;
+}
+.order{
+  margin-top: 3%;
+  border-top: 1px solid #e7e7e7;
+}
+.order button{
+  margin-bottom: 1%;
+  padding: 13px;
+  border: none;
+  border-radius: 4px;
+  background-color: green;
+  margin-left: 2%;
+  margin-top: 4%;
+  bottom: 2rem;
+}
+.loc{
+  top:18rem;
+  position: absolute;
+  color: #89959B;
+  right: 3rem;
+
+}
