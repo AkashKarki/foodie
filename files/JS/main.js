@@ -74,6 +74,30 @@ foodie.controller('RestrauntController',function($scope) {
   	hours: '12 Noon to 1 AM (Mon-Sun)',
   	image: 'https://b.zmtcdn.com/data/pictures/9/2649/0661277daa17c54c8d2bdcf336c37117_featured_v2.jpg?fit=around%7C200%3A200&crop=200%3A200%3B%2A%2C%2A'
   },
+	{
+  	name: 'Biryani Blues',
+  	address: 'B-202 & 203, Supermart 1, DLF Phase 4, Gurgaon',
+  	location: 'Supermart 1, DLF Phase 4',
+  	category: 'CASUAL DINING',
+  	vote: '4.7',
+    id:'4',
+  	cuisines: 'Biryani, Hyderabadi',
+  	cost: '1000',
+  	hours: '12 Noon to 12 Midnight(Mon-Sun)',
+  	image: 'https://b.zmtcdn.com/data/pictures/chains/8/301718/bb30e8235b351ce5fabdccaede64f583_featured_v2.jpg'
+  },
+	{
+  	name: 'Tossin Pizza',
+  	address: 'SF-114, 1st Floor, Galleria Market, DLF Phase 4, Gurgaon',
+  	location: 'DLF Galleria, DLF Phase 4',
+  	category: 'CASUAL DINING',
+  	vote: '4.1',
+    id:'5',
+  	cuisines: 'Pizza, Italian',
+  	cost: '900',
+  	hours: '12 Noon to 1AM(Mon-Sun)',
+  	image: 'https://b.zmtcdn.com/data/pictures/chains/2/305782/613d6e9c4abd4de17dd6c237fa2fd057_featured_v2.jpg'
+  },
 ]
 })
 
@@ -142,6 +166,36 @@ var restraunt=[{
 	name: 'chocolate cake',
 	image: 'https://b.zmtcdn.com/data/pictures/chains/9/2649/e202ef113e6cad530754f2f42737e86b.jpg'
 },
+},
+{
+	name: 'Biryani Blues',
+	address: 'B-202 & 203, Supermart 1, DLF Phase 4, Gurgaon',
+	location: 'Supermart 1, DLF Phase 4',
+	category: 'CASUAL DINING',
+	vote: '4.7',
+	id:'4',
+	cuisines: 'Biryani, Hyderabadi',
+	cost: '1000',
+	hours: '12 Noon to 12 Midnight(Mon-Sun)',
+	image: 'https://b.zmtcdn.com/data/pictures/chains/8/301718/bb30e8235b351ce5fabdccaede64f583_featured_v2.jpg',
+	backimage: 'https://b.zmtcdn.com/data/res_imagery/301718_CHAIN_dbe8d86f4def6c08427ef1c210444566.jpg',
+  bestDish: {
+	name: 'Chicken 65',
+	image: 'https://b.zmtcdn.com/data/pictures/chains/8/301718/7ced5cf0e3dd161e752187a0c4c70b10.jpg'
+},
+},
+{
+	name: 'Tossin Pizza',
+	address: 'SF-114, 1st Floor, Galleria Market, DLF Phase 4, Gurgaon',
+	location: 'DLF Galleria, DLF Phase 4',
+	category: 'CASUAL DINING',
+	vote: '4.1',
+	id:'5',
+	cuisines: 'Pizza, Italian',
+	cost: '900',
+	hours: '12 Noon to 1AM(Mon-Sun)',
+	image: 'https://b.zmtcdn.com/data/pictures/chains/2/305782/613d6e9c4abd4de17dd6c237fa2fd057_featured_v2.jpg',
+	backimage: 'https://b.zmtcdn.com/data/res_imagery/305782_CHAIN_4b7168e93b071abfd983769d318829c5.jpg',
 },
 ];
 $scope.restraunt=restraunt[$routeParams.id-1];
