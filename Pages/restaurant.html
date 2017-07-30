@@ -49,11 +49,14 @@
 <div class="dig">
   <dialog id="displays">
     <div class="fodimg">
-      <img  ng-src="{{restraunt.bestDish.image}}" height="35%" width="100%">
+      <img  ng-src="{{restraunt.bestDish.image}}" height="35%" width="100%"  style="border-radius:6px;" >
     </div>
     <div><h2 style="margin-left:-10px;">Ingredients:</h2></div>
     <div class="list" ng-repeat="ingredients in ingredientss">
-        <span>{{ingredients}}</span>
+        <span>{{$index+1}}:{{ingredients}}</span>
+    </div>
+    <div class="inform">
+      {{values}}
     </div>
     <button ng-click="closedig()" class="buttonss">OK</button>
   </dialog>

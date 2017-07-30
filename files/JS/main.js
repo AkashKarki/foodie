@@ -163,12 +163,29 @@ $scope.getIngredients = function(url) {
 				for (var i =0;i < ingredients.length;i++) {
 	$scope.ingredientss.push(ingredients[i].name);
 	}
-    		console.log($scope.ingredientss);
+
+
+				console.log($scope.ingredientss);
 				var Dia_dis = document.querySelector('#displays');
 				Dia_dis.show();
 				$('.mains').addClass('blur');
 
-
+var harmful_ingredients=['Chocolate' ,'cake', 'cupcake', 'ice cream' ,'candy', 'sugar'];
+var inform=0;
+for(var j=0;j<$scope.ingredientss.length;j++){
+	for(var k=0;k<harmful_ingredients.length;k++){
+	if(harmful_ingredients[k]==$scope.ingredientss[j]){
+		inform=1;
+		break;
+	}
+}
+}
+if(inform==1){
+	$scope.values="Item is not safe for diabetic person.";
+}
+else{
+	$scope.values="Item safe for diabetic person.";
+}
 
 $scope.closedig = function(url){
 	Dia_dis.close();
