@@ -105,7 +105,7 @@ foodie.controller('RestrauntController',function($scope) {  //defining Restraunt
 
 
 
-foodie.controller('loginController',function($scope,$location) {      //defining loginController
+foodie.controller('loginController',function($scope,$location) {     //defining loginController
 	$scope.goTohome = function() {
 		$location.url('home')
 	}
