@@ -1,14 +1,15 @@
-<div ng-controller="showRestraunt">
+<div  ng-controller="showRestraunt">
+  <div class="mains">
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
   <div class="navbar-header">
-  <a class="navbar-brand" href="">WebSiteName</a>
+  <a class="navbar-brand" href="">foodie</a>
   </div>
   <ul class="nav navbar-nav">
   <li class="active"><a href="#!/home">Home</a></li>
   </ul>
   <ul class="nav navbar-nav navbar-right">
-  <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+  <li><a><span class="glyphicon glyphicon-user"></a></span></li>
   <li><a href="#!/"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
   </ul>
   </div>
@@ -26,10 +27,12 @@
       </div>
       <div class="category-main">
         {{restraunt.category}}
+        <div class="best">
         <div class="bestDish" ng-if="restraunt.bestDish" style="margin-left:40%;">
-  	        <span>Recommended:{{restraunt.bestDish.name}} </span>
+  	        <span>Recommended:<img  ng-src="{{restraunt.bestDish.image}}" height="65px" width="65px" style="border-radius:3px;"> </span>
   	        <div ng-click="getIngredients(restraunt.bestDish.image)" class="button">Get Ingredients</div>
-  		</div>
+</div>
+      </div>
       </div>
       <div class="order">
         <button>Order Online</button>
@@ -39,6 +42,20 @@
       </div>
 
   </div>
+
+</div>
 </div>
 <div ng-hide="restraunt.name" style="text-align:center;margin-top:20%;"><h1>404-PAGE NOT FOUND</h1></div>
+<div class="dig">
+  <dialog id="displays">
+    <div class="fodimg">
+      <img  ng-src="{{restraunt.bestDish.image}}" height="35%" width="100%">
+    </div>
+    <div><h2 style="margin-left:-10px;">Ingredients:</h2></div>
+    <div class="list" ng-repeat="ingredients in ingredientss">
+        <span>{{ingredients}}</span>
+    </div>
+    <button ng-click="closedig()" class="buttonss">OK</button>
+  </dialog>
+</div>
 </div>

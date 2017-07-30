@@ -159,12 +159,23 @@ $scope.getIngredients = function(url) {
 		'data': data
 	}).then(function (response) {
 			var ingredients = response.data.outputs[0].data.concepts;
-  			var list = '';
-  			for (var i =0;i < ingredients.length;i++) {
-  				list += '<div class="ingredient">' + ingredients[i].name + '</div>'
-  			}
-    		// $('.ingredients').html(list);
-    		console.log(list);
+			$scope.ingredientss=[];
+				for (var i =0;i < ingredients.length;i++) {
+	$scope.ingredientss.push(ingredients[i].name);
+	}
+    		console.log($scope.ingredientss);
+				var Dia_dis = document.querySelector('#displays');
+				Dia_dis.show();
+				$('.mains').addClass('blur');
+
+
+
+$scope.closedig = function(url){
+	Dia_dis.close();
+	$('.mains').removeClass('blur');
+}
+
+
         }, function (xhr) {
         	console.log(xhr);
         })
