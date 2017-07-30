@@ -1,32 +1,32 @@
-<div class="restraunt" ng-controller="RestrauntController">
-<nav class="navbar navbar-inverse">
+<div class="restraunt" ng-controller="RestrauntController"> <!-- RestrauntController controller is used for main.html-->
+<nav class="navbar navbar-inverse">  <!--bootstrap class(navbar navbar-inverse) for nav bar-->
 <div class="container-fluid">
 <div class="navbar-header">
 <a class="navbar-brand" href="">foodie</a>
 </div>
 <ul class="nav navbar-nav">
-<li class="active"><a href="#!/home">Home</a></li>
+<li class="active"><a href="#!/home">Home</a></li>  <!--href="#!/home" is address of home route-->
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li><a><span class="glyphicon glyphicon-user"></span></a></li>
-<li><a href="#!/"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li>
+<li><a href="#!/"><span class="glyphicon glyphicon-log-in"></span> Log out</a></li><!--href="#!/" address of login route-->
 </ul>
 </div>
 </nav>
- <div class="header">
+ <div class="header">  <!-- use to show slider by id -->
   <div class="slideshow">
 <div class="slide"></div>
 </div>
   </div>
-  <div class="row">
+  <div class="row">  <!--use to show search bar bootstrap-->
 <div class="col-lg-6">
 <div class="input-group">
-<input type="text" class="form-control" placeholder="Search for..." ng-model="query">
+<input type="text" class="form-control" placeholder="Search for..." ng-model="query">  <!-- ng-model="query" is use to filter the search-->
   <input type="button" value="GO" class="logBut">
 </div><!-- /input-group -->
 </div><!-- /.col-lg-6 -->
 </div>
-    <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
+    <div ng-repeat="restaurant in restaurants | filter:query" class="restaurant"> <!-- ng-repete to show list of restaurant-->
 <div class="rest-wrapper">
   <div class="image">
       <img ng-src="{{restaurant.image}}" height="100" width="100">
@@ -36,7 +36,7 @@
          <small>{{restaurant.category}} </small>
       </div>
       <div class="rest-name">
-      <a ng-href="#!/restraunt/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
+      <a ng-href="#!/restraunt/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a> <!-- ng-href="#!/restraunt/{{restaurant.id}} to change the route when click on restraunt name-->
       </div>
       <div>
          <strong> {{restaurant.location}}</strong>

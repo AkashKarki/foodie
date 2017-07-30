@@ -1,4 +1,4 @@
-<div  ng-controller="showRestraunt">
+<div  ng-controller="showRestraunt"> <!-- showRestraunt controller is used for restraunt.html-->
   <div class="mains">
   <nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -14,7 +14,7 @@
   </ul>
   </div>
   </nav>
-<div ng-if="restraunt.name">
+<div ng-if="restraunt.name"> <!-- if restraunt exist in $scope.restraunt array in showRestraunt controller then only show-->
     <div class="covers">
     <img  ng-src="{{restraunt.backimage}}" height="43%" width="61%">
   </div>

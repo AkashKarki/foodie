@@ -1,30 +1,30 @@
 
 
-var foodie = angular.module('foodie',['ngRoute']);
+var foodie = angular.module('foodie',['ngRoute']); //setting up abgular app
 
 
-foodie.config(function ($routeProvider) {
+foodie.config(function ($routeProvider) { //setting route path for site
 	$routeProvider
-	.when('/',{
+	.when('/',{       //show login.html inside ng-view tag in index.html
 		templateUrl: 'pages/login.html',
-		controller: 'loginController'
+		controller: 'loginController' //give control to loginController
 	})
-	.when('/home',{
+	.when('/home',{    //show main.html inside ng-view tag in index.html
 		templateUrl: 'pages/main.html',
-		controller: 'RestrauntController'
+		controller: 'RestrauntController'   //give control to RestrauntController
 	})
-  .when('/restraunt/:id',{
+  .when('/restraunt/:id',{    //:id is used to generate unique adderss for $routeParams
 		templateUrl: 'pages/restaurant.html',
 		controller: 'showRestraunt'
 	})
 })
 
 
-foodie.controller('RestrauntController',function($scope) {
+foodie.controller('RestrauntController',function($scope) {  //defining RestrauntController
   var index = 0;
   var show="image1";
   carousel();
-  function carousel(){
+  function carousel(){                                 //slider stuff
           $('.slide').removeClass(show);//chaining
           $(".slide").addClass("hidden");
           index++;
@@ -105,7 +105,7 @@ foodie.controller('RestrauntController',function($scope) {
 
 
 
-foodie.controller('loginController',function($scope,$location) {
+foodie.controller('loginController',function($scope,$location) {      //defining loginController
 	$scope.goTohome = function() {
 		$location.url('home')
 	}
@@ -114,7 +114,7 @@ foodie.controller('loginController',function($scope,$location) {
 
 
 
-foodie.controller('showRestraunt',function($scope,$routeParams,$http) {
+foodie.controller('showRestraunt',function($scope,$routeParams,$http) {   //defining showRestraunt controller
   console.log($routeParams.id);
 var restraunt=[{
   name: 'Farzi Cafe',
@@ -198,7 +198,7 @@ var restraunt=[{
 	backimage: 'https://b.zmtcdn.com/data/res_imagery/305782_CHAIN_4b7168e93b071abfd983769d318829c5.jpg',
 },
 ];
-$scope.restraunt=restraunt[$routeParams.id-1];
+$scope.restraunt=restraunt[$routeParams.id-1];  //taking out value of :id from link will be used to show unique restraunt in restraunt.html page
 
 $scope.getIngredients = function(url) {
 	console.log(url)
@@ -224,9 +224,9 @@ $scope.getIngredients = function(url) {
 				Dia_dis.show();
 				$('.mains').addClass('blur');
 
-var harmful_ingredients=['Chocolate' ,'cake', 'cupcake', 'ice cream' ,'candy', 'sugar'];
+var harmful_ingredients=['Chocolate' ,'cake', 'cupcake', 'ice cream' ,'candy', 'sugar']; //an array of harmful_ingredients
 var inform=0;
-for(var j=0;j<$scope.ingredientss.length;j++){
+for(var j=0;j<$scope.ingredientss.length;j++){    //checking for harmful_ingredients in $scope.ingredientss
 	for(var k=0;k<harmful_ingredients.length;k++){
 	if(harmful_ingredients[k]==$scope.ingredientss[j]){
 		inform=1;
